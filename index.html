@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+</style>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.flip-box {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+}
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-box-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-box-back {
+  background-color: #555;
+  color: white;
+  transform: rotateY(180deg);
+}
+</style>
+      
+      <style>
+ul {
+  list-style-type: none;
+
+
+  background-color: blue;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: maroon;
+}
+</style>
+      
+
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Kimlee Tech & Solutions</title>
+  <link rel = "icon" href = 
+"logon.png" 
+        type = "image/x-icon">
+        
+        <style>
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: white;
+  color: white;
+  font-size: 20px;
+  padding: 32px 32px;
+}
+</style>
+    
+    <style>
+    
+     .gfg {
+            margin: 3%;
+            position: relative;
+        }
+  
+        .first-txt {
+            position: absolute;
+            top: 17px;
+            left: 50px;
+        }
+  
+        .second-txt {
+            position: absolute;
+            bottom: 20px;
+            left: 10px;
+        }
+    
+    
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: blue;
+  font-size: 20px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: white;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+</style>
+
+  </head>
+
+  <body style="background-color:white;">
+   <nav>
+      <div class="heading">
+           
+ </div>
+	   <ul class="nav-links">
+   <div class="dropdown">
+  <button class="dropbtn"><img src="lines.PNG" width="40" height="30" alt="Natural" /></a></button>
+  <div class="dropdown-content">
+    <a href="services.html"><i>services</i></a>
+    <a href="products.html"><i>products</i></a>
+    <a href="gallery.html"><i>gallery</i></a>
+    <a href="updates.html"><i>updates</i></a>
+      <a href="registration.html"><i>membership</i></a>
+    
+   
+</div>
+
+      </ul>
+  
+
+    </nav>
+    
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+    width: 100%;
+    margin: auto;
+  }
+  </style>
+</head>
+<body>
+     <a href="https://www.facebook.com/profile.php?id=100085038962830" style="text-decoration:none" class="" width="100" height="50" alt="Natural" style="horizontal-align:right; text-align: right"><b>Kimlee Tech & Solutions</b>
+     <div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="windows.PNG" style="width:100%">
+  <div class="text">install windows</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="office.PNG" style="width:100%">
+  <div class="text">install office</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="hardware.PNG" style="width:100%">
+  <div class="text">fix any hardware problem</div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 4000); // Change image every 2 seconds
+}
+</script>
+
+
+	 </div> 
+		 
+  </div>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+  
+<br>
+<h3 style="border:grey; color: blue;" font face="forte"><center><i><b>Guaranteed Solutions</b></i></center></h3> 
+    <br>
+    
+     <img src="flys.PNG" style="width:100%">
+       <img id="myImg" src="screeprotector.jfif" alt="Snow" style="width:100%;max-width:300px">
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+</script>
+    
+ <h3 style="text-decoration:none"><h3 style="color:blue; text-align: left;">Some of Our Deals</h3></h3>
+ 
+        1. Blank Monitors<br>
+        2. Mouse Problems<br>
+        3. Jumpy Mouse<br>
+        4. PC wont recognize USB camera<br>
+        5. Non-sync of Smartphones<br>
+        6. Keyboard problems<br>
+        7. Power Cord problems<br>
+        8. Motherboard problems<br>
+        9. Strange Noises<br>
+        10. Over hearting<br>
+        11. Slow internet<br>
+        12. Insufficient Memory<br>
+        13. Blue/white screen of death<br>
+        14. CMOS error<br>
+        15. All computer external devices problems<br>
+        16. We also fix all mobile phones problems (software & hardware)<br>
+        17. insert screen protectors and sell all mobile phones external devices<br>
+        
+  
+  <img src="screwing.jpeg" alt="Avatar" class="image" style="width:100%">
+
+</body>
+  </div>
+</div>
+
+<div class="container">
+    
+   
+  
+</div>
+<footer style="background-color:white;"> 
+
+</style>
+</head>
+<body>
+
+
+
+<div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+      <img src="logo.PNG" alt="logo" style="width:300px;height:200px">
+    </div>
+    <div class="flip-box-back">
+      <h4><center>Kimlee Tech & Solutions</center></h4>
+         <p><center>Since 2021<center></p>
+    </div>
+  </div>
+</div>
+ <form  action="mailto:mosiuoa.liefo@bothouniversity.com" method="post" enctype="text/plain">
+<h4 style="text-decoration:none"><h4 style="color:red; text-align: left;"><b>Subscribe</b></h4>
+  <input type="email" id="emails" name="emails"  placeholder="Your Email Address">
+  <input type="submit">
+</form>
+
+    <h3 style="text-decoration:none"><h3 style="color:  blue;">social</h3></h3>
+     <a href="https://www.facebook.com/profile.php?id=100085038962830" style="text-decoration:none"> <img src="f.PNG" width="60" height="50" alt="Natural" /></a>
+     
+       <a href="https://www.instagram.com/mosiuoa28/" style="text-decoration:none"> <img src="instagram.PNG" width="50" height="45" alt="Natural" /></a>
+ 
+ <a href="https://www.linkedin.com/search/results/people/?firstName=MOSIUOA&lastName=LIEFO&origin=SEO_PSERP&sid=qbf" style="text-decoration:none"> <img src="link.PNG" width="55" height="50" alt="Natural" /></a>
+ 
+ <a href="https://www.youtube.com/channel/UCGeI_2uAgWv3_53nPh06Wnw" style="text-decoration:none"> <img src="utube.PNG" width="50" height="45" alt="Natural" /></a>
+    
+<ul>
+ 
+<li><a href="contact.html" style="text-decoration:none"><h6 style="color:  white;">Contact</h6></a></li>
+    <li><a href="about.html" style="text-decoration:none"><h6 style="color:  white;">About</h6></a></li>
+<li><a href="policy.html" style="text-decoration:none"><h6 style="color:  white;">Policy</h6></li>
+
+<h5 style="text-decoration:none"><i><h5 style="color:white; text-align: right;">Copyright@byMosiuoa Liefo</h5></i></h5>
+</ul>
+    </div>
+
+
+</footer>
+  </body>    
+
+</html>
